@@ -218,3 +218,22 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Local document workspace additions
+# Local editor and operating system files
+.DS_Store
+Thumbs.db
+Desktop.ini
+*.swp
+*.swo
+~$*
+
+# Temporary outputs and caches
+tmp/
+__pycache__/
+*.py[cod]
+
+# Local credentials and environment configuration
+.env
+.env.*
+!.env.example
