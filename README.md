@@ -9,6 +9,7 @@
 | 主题 | 文档 | 内容 |
 | --- | --- | --- |
 | 深度学习基础 · BPE 分词 | [BPE 分词：从相邻合并到 Embedding](技术前要-深度学习基础/BPE分词/BPE分词_从相邻合并到Embedding.md) | 23 张视频截图、相邻对统计与三轮合并手算、字节级编码、Token ID、Embedding 及可运行教学代码 |
+| 深度学习基础 · Embedding | [Token 与 Embedding：从 strawberry 计数到向量查表](技术前要-深度学习基础/Embedding/Token与Embedding_从strawberry计数到向量查表.md) | 27 张视频截图、ID 与向量的区别、查表及梯度手算、字符计数、词表容量与代码核对 |
 | 深度学习基础 · 激活函数 | [激活函数：从非线性到 SwiGLU](技术前要-深度学习基础/激活函数/激活函数_从非线性到SwiGLU.md) | 两条视频的 30 张截图、函数与梯度手算、论文作者、FFN / SwiGLU 结构与计算预算 |
 | 深度学习基础 · 梯度传播 | [梯度消失与爆炸：从链式法则到残差连接](技术前要-深度学习基础/梯度消失与爆炸/梯度消失与爆炸_从链式法则到残差连接.md) | 22 张视频截图、梯度连乘、神经元与矩阵反传手算、Sigmoid / ReLU、初始化及残差路径 |
 | 深度学习基础 · Transformer 全流程 | [Transformer：从输入到自回归生成](技术前要-深度学习基础/Transformer全流程/Transformer_从输入到自回归生成.md) | 35 张视频截图串联 Encoder–Decoder、交叉注意力、目标右移、损失、生成循环、KV cache 与 Decoder-only |
@@ -29,7 +30,7 @@
 
 ## 建议阅读顺序
 
-1. **建立基础：** 先阅读 BPE 分词，再阅读激活函数、梯度消失与爆炸以及 Transformer 全流程专题，把非线性、梯度、各模块和生成过程串起来，再阅读 Transformer 原始论文解读，深入理解向量与矩阵计算。
+1. **建立基础：** 先阅读 BPE 分词和 Token / Embedding，再阅读激活函数、梯度消失与爆炸以及 Transformer 全流程专题，把非线性、梯度、各模块和生成过程串起来，再阅读 Transformer 原始论文解读，深入理解向量与矩阵计算。
 2. **拆解模块：** 阅读位置编码、RoPE、Attention 和 MoE 专题，对照输入输出形状理解公式。
 3. **连接具体模型：** 阅读 Qwen 与 DeepSeek 技术路线，将架构设计映射到基础模块。
 4. **理解部署成本：** 阅读 LLM Serving 课程解读，把参数量、FLOPs、KV cache、显存、吞吐和延迟联系起来。
@@ -46,6 +47,10 @@
 │   │   ├── BPE分词_从相邻合并到Embedding.md
 │   │   ├── bpe_toy.py           # 仅用标准库的手算复现
 │   │   └── assets/              # 23 张参考视频画面
+│   ├── Embedding/
+│   │   ├── Token与Embedding_从strawberry计数到向量查表.md
+│   │   ├── embedding_math.py   # 查表、梯度与容量核对
+│   │   └── assets/              # 27 张参考视频画面
 │   ├── 激活函数/
 │   │   ├── 激活函数_从非线性到SwiGLU.md
 │   │   └── assets/              # 两条参考视频的 30 张关键画面
