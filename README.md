@@ -24,6 +24,7 @@
 | FFN 与专家模型 | [MoE 核心论文与技术演进](技术拆解-FNN层/MoE_核心论文与技术演进.md) | 专家路由、激活参数、负载均衡及相关论文 |
 | 残差连接 | [残差连接：从 ResNet 到 Transformer](技术拆解-残差链接/残差连接_从ResNet到Transformer.md) | 作者与核心论文、退化问题、梯度推导、视频图示及 FFN / MoE 中的残差结构 |
 | 归一化 | [归一化：从 LayerNorm 到 RMSNorm](技术拆解-归一化/归一化_从LayerNorm到RMSNorm.md) | 作者与核心论文、BN / LN / RMSNorm、公式手算、梯度及 Pre-Norm / Post-Norm |
+| 输出层与采样 | [从 Logits 到 Temperature、Top-k 与 Top-p](技术拆解-输出/输出层与采样_从Logits到Temperature与TopP.md) | 28 张视频截图、LM Head、softmax 与温度手算、过滤及抽样、随机种子与复现边界 |
 | Qwen | [Qwen 技术优化路线与官方资料索引](技术代表/Qwen_技术优化路线与官方资料索引.md) | 从模块改动理解模型架构，附原始资料入口 |
 | DeepSeek | [DeepSeek 技术优化路线与官方资料索引](技术代表/DeepSeek_技术优化路线与官方资料索引.md) | 注意力、KV 压缩、MoE 等优化路线与资料入口 |
 | Qwen 架构专题 | [Qwen3.8-Flash-Next 架构深度解读](技术代表/Qwen3.8-Flash-Next_架构深度解读.md) | 整体结构、模块公式、手算示例与部署含义 |
@@ -33,7 +34,7 @@
 ## 建议阅读顺序
 
 1. **建立基础：** 先阅读 BPE 分词和 Token / Embedding，再阅读激活函数、梯度消失与爆炸以及 Transformer 全流程专题，把非线性、梯度、各模块和生成过程串起来，再阅读 Transformer 原始论文解读，深入理解向量与矩阵计算。
-2. **拆解模块：** 阅读位置编码、RoPE、Attention、FFN 和 MoE 专题，对照输入输出形状理解公式。
+2. **拆解模块：** 阅读位置编码、RoPE、Attention、FFN、MoE 以及输出层与采样专题，对照输入输出形状理解公式。
 3. **连接具体模型：** 阅读 Qwen 与 DeepSeek 技术路线，将架构设计映射到基础模块。
 4. **理解部署成本：** 阅读 LLM Serving 课程解读，把参数量、FLOPs、KV cache、显存、吞吐和延迟联系起来。
 
@@ -78,6 +79,10 @@
 │   └── MoE/                    # MoE 视频解读、复算代码与 30 张截图
 ├── 技术拆解-残差链接/
 ├── 技术拆解-归一化/
+├── 技术拆解-输出/
+│   ├── 输出层与采样_从Logits到Temperature与TopP.md
+│   ├── sampling_math.py        # 概率、候选过滤与采样核对
+│   └── assets/                 # 28 张参考视频画面
 ├── 技术代表/
 └── 哈佛课程解读/
     └── llm_serving_basics_1/

@@ -261,6 +261,8 @@ print(len(positions), positions)  # 3 [3, 8, 9]
 
 输入 Embedding 解决“从离散符号到连续向量”；输出层解决“从隐藏状态到词表上的分数”。两者可以共享权重，但在计算链中的方向和用途不同。
 
+输出方向继续阅读 [输出层与采样：从 Logits 到 Temperature、Top-k 与 Top-p](../../技术拆解-输出/输出层与采样_从Logits到Temperature与TopP.md)，对照输入查表与输出打分的区别。
+
 可继续阅读 [Transformer 全流程](../../技术前要-深度学习基础/Transformer全流程/Transformer_从输入到自回归生成.md)，了解后续注意力、FFN 与自回归生成。
 
 ## 十四、配套数值核对
