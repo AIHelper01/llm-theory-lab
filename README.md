@@ -14,6 +14,8 @@
 | 深度学习基础 · 梯度传播 | [梯度消失与爆炸：从链式法则到残差连接](技术前要-深度学习基础/梯度消失与爆炸/梯度消失与爆炸_从链式法则到残差连接.md) | 22 张视频截图、梯度连乘、神经元与矩阵反传手算、Sigmoid / ReLU、初始化及残差路径 |
 | 深度学习基础 · Transformer 全流程 | [Transformer：从输入到自回归生成](技术前要-深度学习基础/Transformer全流程/Transformer_从输入到自回归生成.md) | 35 张视频截图串联 Encoder–Decoder、交叉注意力、目标右移、损失、生成循环、KV cache 与 Decoder-only |
 | Transformer 基础 | [Attention Is All You Need](技术起源-Transformer/Attention_Is_All_You_Need.md) | 从 Embedding、Attention、FFN 到 Encoder–Decoder 与 Decoder-only |
+| 位置编码基础 · 正弦 | [从序列编号到多频率坐标](技术拆解-位置编码优化/正弦位置编码/正弦位置编码_从序列编号到多频率坐标.md) | 24 张视频截图、位置相加、正余弦公式、坐标手算、位移矩阵与外推边界 |
+| 位置编码基础 · RoPE | [从二维旋转到相对位置点积](技术拆解-位置编码优化/RoPE基础/RoPE_从二维旋转到相对位置点积.md) | 24 张视频截图、旋转矩阵、相对位移推导、多频率、KV 缓存及长上下文边界 |
 | 位置编码 | [位置编码论文与技术演进](技术拆解-位置编码优化/Transformer_位置编码论文与技术演进.md) | Sinusoidal、相对位置表示、T5、RoPE、ALiBi |
 | RoPE 专题 | [RoPE 原理与 Qwen / DeepSeek 架构解读](技术拆解-位置编码优化/RoPE_原理与Qwen_DeepSeek架构解读.md) | 旋转位置编码的数学机制及架构应用 |
 | KV Cache 基础 | [KV Cache：从因果不变性到 Prefill / Decode](技术拆解-注意力机制/KVCache/KVCache基础_从因果不变性到Prefill与Decode.md) | 29 张视频截图、为什么只存 KV、历史表示不变的证明、99% 的计数口径与双层缓存等价验证 |
@@ -66,6 +68,8 @@
 │       └── assets/              # 27 张参考视频画面
 ├── 技术起源-Transformer/
 ├── 技术拆解-位置编码优化/
+│   ├── 正弦位置编码/            # 独立视频解读、复算代码与 24 张截图
+│   └── RoPE基础/                # 独立视频解读、复算代码与 24 张截图
 ├── 技术拆解-注意力机制/
 │   └── KVCache/
 │       ├── KVCache基础_从因果不变性到Prefill与Decode.md
