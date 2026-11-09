@@ -19,6 +19,8 @@
 | KV Cache 基础 | [KV Cache：从因果不变性到 Prefill / Decode](技术拆解-注意力机制/KVCache/KVCache基础_从因果不变性到Prefill与Decode.md) | 29 张视频截图、为什么只存 KV、历史表示不变的证明、99% 的计数口径与双层缓存等价验证 |
 | KV Cache 专题 | [KV Cache、MQA、GQA 与 MLA](技术拆解-注意力机制/KVCache/KVCache_MQA_GQA_MLA_从显存公式到低秩吸收.md) | 28 张视频截图、缓存容量手算、KV 共享、MLA 低秩吸收与解耦 RoPE、可运行数学复算 |
 | 注意力机制 | [Attention 技术演进](技术拆解-注意力机制/Attention_技术演进_Transformer至Qwen3.8与DeepSeekV4.1.md) | MHA、MQA、GQA、FlashAttention、MLA、线性与稀疏注意力等 |
+| FFN 原理 | [FFN：从非线性特征到 SwiGLU 与参数记忆](技术拆解-FNN层/FFN/FFN_从非线性特征到SwiGLU与参数记忆.md) | 26 张视频截图、升降维与矩阵手算、几何解释、SwiGLU、参数预算与记忆解释 |
+| MoE 原理 | [MoE：从稠密 FFN 到稀疏路由与负载均衡](技术拆解-FNN层/MoE/MoE_从稠密FFN到稀疏路由与负载均衡.md) | 30 张视频截图、Top-k 手算、负载均衡、细粒度与共享专家、参数及通信成本 |
 | FFN 与专家模型 | [MoE 核心论文与技术演进](技术拆解-FNN层/MoE_核心论文与技术演进.md) | 专家路由、激活参数、负载均衡及相关论文 |
 | 残差连接 | [残差连接：从 ResNet 到 Transformer](技术拆解-残差链接/残差连接_从ResNet到Transformer.md) | 作者与核心论文、退化问题、梯度推导、视频图示及 FFN / MoE 中的残差结构 |
 | 归一化 | [归一化：从 LayerNorm 到 RMSNorm](技术拆解-归一化/归一化_从LayerNorm到RMSNorm.md) | 作者与核心论文、BN / LN / RMSNorm、公式手算、梯度及 Pre-Norm / Post-Norm |
@@ -31,7 +33,7 @@
 ## 建议阅读顺序
 
 1. **建立基础：** 先阅读 BPE 分词和 Token / Embedding，再阅读激活函数、梯度消失与爆炸以及 Transformer 全流程专题，把非线性、梯度、各模块和生成过程串起来，再阅读 Transformer 原始论文解读，深入理解向量与矩阵计算。
-2. **拆解模块：** 阅读位置编码、RoPE、Attention 和 MoE 专题，对照输入输出形状理解公式。
+2. **拆解模块：** 阅读位置编码、RoPE、Attention、FFN 和 MoE 专题，对照输入输出形状理解公式。
 3. **连接具体模型：** 阅读 Qwen 与 DeepSeek 技术路线，将架构设计映射到基础模块。
 4. **理解部署成本：** 阅读 LLM Serving 课程解读，把参数量、FLOPs、KV cache、显存、吞吐和延迟联系起来。
 
@@ -70,6 +72,9 @@
 │       ├── kv_cache_math.py     # 缓存容量与矩阵吸收复算
 │       └── assets/              # 进阶篇 28 张；kv-basics/ 为基础篇 29 张
 ├── 技术拆解-FNN层/
+│   ├── MoE_核心论文与技术演进.md
+│   ├── FFN/                    # FFN 视频解读、复算代码与 26 张截图
+│   └── MoE/                    # MoE 视频解读、复算代码与 30 张截图
 ├── 技术拆解-残差链接/
 ├── 技术拆解-归一化/
 ├── 技术代表/
