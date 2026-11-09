@@ -221,7 +221,7 @@ KV Cache 取决于注意力结构，不能由 MoE 专家激活比例直接推出
 
 ![视频 14:30：以 strawberry 计数引出后续主题](assets/video-870s.jpg)
 
-后续可读 [Token 与 Embedding](../../技术前要-深度学习基础/Embedding/Token与Embedding_从strawberry计数到向量查表.md)，把模型入口与各层计算连接起来。
+后续可读 [Token 与 Embedding](../../技术拆解-分词与向量化/Embedding/Token与Embedding_从strawberry计数到向量查表.md)，把模型入口与各层计算连接起来。
 
 ## 十二、复算代码与论文来源
 

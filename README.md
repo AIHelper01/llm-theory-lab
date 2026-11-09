@@ -8,8 +8,8 @@
 
 | 主题 | 文档 | 内容 |
 | --- | --- | --- |
-| 深度学习基础 · BPE 分词 | [BPE 分词：从相邻合并到 Embedding](技术前要-深度学习基础/BPE分词/BPE分词_从相邻合并到Embedding.md) | 23 张视频截图、相邻对统计与三轮合并手算、字节级编码、Token ID、Embedding 及可运行教学代码 |
-| 深度学习基础 · Embedding | [Token 与 Embedding：从 strawberry 计数到向量查表](技术前要-深度学习基础/Embedding/Token与Embedding_从strawberry计数到向量查表.md) | 27 张视频截图、ID 与向量的区别、查表及梯度手算、字符计数、词表容量与代码核对 |
+| 分词与向量化 · BPE | [BPE 分词：从相邻合并到 Embedding](技术拆解-分词与向量化/BPE分词/BPE分词_从相邻合并到Embedding.md) | 23 张视频截图、相邻对统计与三轮合并手算、字节级编码、Token ID、Embedding 及可运行教学代码 |
+| 分词与向量化 · Embedding | [Token 与 Embedding：从 strawberry 计数到向量查表](技术拆解-分词与向量化/Embedding/Token与Embedding_从strawberry计数到向量查表.md) | 27 张视频截图、ID 与向量的区别、查表及梯度手算、字符计数、词表容量与代码核对 |
 | 深度学习基础 · 激活函数 | [激活函数：从非线性到 SwiGLU](技术前要-深度学习基础/激活函数/激活函数_从非线性到SwiGLU.md) | 两条视频的 30 张截图、函数与梯度手算、论文作者、FFN / SwiGLU 结构与计算预算 |
 | 深度学习基础 · 梯度传播 | [梯度消失与爆炸：从链式法则到残差连接](技术前要-深度学习基础/梯度消失与爆炸/梯度消失与爆炸_从链式法则到残差连接.md) | 22 张视频截图、梯度连乘、神经元与矩阵反传手算、Sigmoid / ReLU、初始化及残差路径 |
 | 深度学习基础 · Transformer 全流程 | [Transformer：从输入到自回归生成](技术前要-深度学习基础/Transformer全流程/Transformer_从输入到自回归生成.md) | 35 张视频截图串联 Encoder–Decoder、交叉注意力、目标右移、损失、生成循环、KV cache 与 Decoder-only |
@@ -45,14 +45,6 @@
 .
 ├── README.md
 ├── 技术前要-深度学习基础/
-│   ├── BPE分词/
-│   │   ├── BPE分词_从相邻合并到Embedding.md
-│   │   ├── bpe_toy.py           # 仅用标准库的手算复现
-│   │   └── assets/              # 23 张参考视频画面
-│   ├── Embedding/
-│   │   ├── Token与Embedding_从strawberry计数到向量查表.md
-│   │   ├── embedding_math.py   # 查表、梯度与容量核对
-│   │   └── assets/              # 27 张参考视频画面
 │   ├── 激活函数/
 │   │   ├── 激活函数_从非线性到SwiGLU.md
 │   │   └── assets/              # 两条参考视频的 30 张关键画面
@@ -62,6 +54,15 @@
 │   └── Transformer全流程/
 │       ├── Transformer_从输入到自回归生成.md
 │       └── assets/              # 35 张参考视频画面
+├── 技术拆解-分词与向量化/
+│   ├── BPE分词/
+│   │   ├── BPE分词_从相邻合并到Embedding.md
+│   │   ├── bpe_toy.py           # 仅用标准库的手算复现
+│   │   └── assets/              # 23 张参考视频画面
+│   └── Embedding/
+│       ├── Token与Embedding_从strawberry计数到向量查表.md
+│       ├── embedding_math.py   # 查表、梯度与容量核对
+│       └── assets/              # 27 张参考视频画面
 ├── 技术起源-Transformer/
 ├── 技术拆解-位置编码优化/
 ├── 技术拆解-注意力机制/
