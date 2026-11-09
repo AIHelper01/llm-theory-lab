@@ -20,6 +20,7 @@
 | RoPE 专题 | [RoPE 原理与 Qwen / DeepSeek 架构解读](技术拆解-位置编码优化/RoPE_原理与Qwen_DeepSeek架构解读.md) | 旋转位置编码的数学机制及架构应用 |
 | KV Cache 基础 | [KV Cache：从因果不变性到 Prefill / Decode](技术拆解-注意力机制/KVCache/KVCache基础_从因果不变性到Prefill与Decode.md) | 29 张视频截图、为什么只存 KV、历史表示不变的证明、99% 的计数口径与双层缓存等价验证 |
 | KV Cache 专题 | [KV Cache、MQA、GQA 与 MLA](技术拆解-注意力机制/KVCache/KVCache_MQA_GQA_MLA_从显存公式到低秩吸收.md) | 28 张视频截图、缓存容量手算、KV 共享、MLA 低秩吸收与解耦 RoPE、可运行数学复算 |
+| 注意力基础 · QKV | [Q、K、V：从三种投影到注意力读取](技术拆解-注意力机制/QKV基础/QKV_从三种投影到注意力读取.md) | 22 张视频截图、投影与点积手算、softmax、Value 汇总、K / V 受控对比及因果矩阵验证 |
 | 注意力机制 | [Attention 技术演进](技术拆解-注意力机制/Attention_技术演进_Transformer至Qwen3.8与DeepSeekV4.1.md) | MHA、MQA、GQA、FlashAttention、MLA、线性与稀疏注意力等 |
 | FFN 原理 | [FFN：从非线性特征到 SwiGLU 与参数记忆](技术拆解-FNN层/FFN/FFN_从非线性特征到SwiGLU与参数记忆.md) | 26 张视频截图、升降维与矩阵手算、几何解释、SwiGLU、参数预算与记忆解释 |
 | MoE 原理 | [MoE：从稠密 FFN 到稀疏路由与负载均衡](技术拆解-FNN层/MoE/MoE_从稠密FFN到稀疏路由与负载均衡.md) | 30 张视频截图、Top-k 手算、负载均衡、细粒度与共享专家、参数及通信成本 |
@@ -71,6 +72,7 @@
 │   ├── 正弦位置编码/            # 独立视频解读、复算代码与 24 张截图
 │   └── RoPE基础/                # 独立视频解读、复算代码与 24 张截图
 ├── 技术拆解-注意力机制/
+│   ├── QKV基础/                # 单头注意力解读、复算代码与 22 张截图
 │   └── KVCache/
 │       ├── KVCache基础_从因果不变性到Prefill与Decode.md
 │       ├── kv_cache_equivalence.py  # 双层因果注意力的缓存等价验证

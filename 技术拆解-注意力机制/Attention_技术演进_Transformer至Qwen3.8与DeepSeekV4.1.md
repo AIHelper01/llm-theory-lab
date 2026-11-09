@@ -1,5 +1,7 @@
 # Attention 注意力机制演进：从 Transformer 到 Qwen3.8 与 DeepSeek-V4.1
 
+基础视频解读：[Q、K、V：从三种投影到注意力读取](QKV基础/QKV_从三种投影到注意力读取.md)，包含完整手算、原视频截图与复算代码。
+
 > **技术教材｜2026-11-03**  
 > **阅读环境：Typora** · 标准 Markdown + 内嵌 HTML/SVG · 所有图形离线可见  
 > **范围：** MHA / MQA / GQA / FlashAttention / MLA / Linear Attention / Gated DeltaNet / Sparse Attention / QSA / CSA2 / CED
