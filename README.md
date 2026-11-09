@@ -9,6 +9,7 @@
 | 主题 | 文档 | 内容 |
 | --- | --- | --- |
 | 深度学习基础 · 激活函数 | [激活函数：从非线性到 SwiGLU](技术前要-深度学习基础/激活函数/激活函数_从非线性到SwiGLU.md) | 两条视频的 30 张截图、函数与梯度手算、论文作者、FFN / SwiGLU 结构与计算预算 |
+| 深度学习基础 · 梯度传播 | [梯度消失与爆炸：从链式法则到残差连接](技术前要-深度学习基础/梯度消失与爆炸/梯度消失与爆炸_从链式法则到残差连接.md) | 22 张视频截图、梯度连乘、神经元与矩阵反传手算、Sigmoid / ReLU、初始化及残差路径 |
 | 深度学习基础 · Transformer 全流程 | [Transformer：从输入到自回归生成](技术前要-深度学习基础/Transformer全流程/Transformer_从输入到自回归生成.md) | 35 张视频截图串联 Encoder–Decoder、交叉注意力、目标右移、损失、生成循环、KV cache 与 Decoder-only |
 | Transformer 基础 | [Attention Is All You Need](技术起源-Transformer/Attention_Is_All_You_Need.md) | 从 Embedding、Attention、FFN 到 Encoder–Decoder 与 Decoder-only |
 | 位置编码 | [位置编码论文与技术演进](技术拆解-位置编码优化/Transformer_位置编码论文与技术演进.md) | Sinusoidal、相对位置表示、T5、RoPE、ALiBi |
@@ -25,7 +26,7 @@
 
 ## 建议阅读顺序
 
-1. **建立基础：** 阅读激活函数与 Transformer 全流程专题，把非线性、梯度、各模块和生成过程串起来，再阅读 Transformer 原始论文解读，深入理解向量与矩阵计算。
+1. **建立基础：** 阅读激活函数、梯度消失与爆炸以及 Transformer 全流程专题，把非线性、梯度、各模块和生成过程串起来，再阅读 Transformer 原始论文解读，深入理解向量与矩阵计算。
 2. **拆解模块：** 阅读位置编码、RoPE、Attention 和 MoE 专题，对照输入输出形状理解公式。
 3. **连接具体模型：** 阅读 Qwen 与 DeepSeek 技术路线，将架构设计映射到基础模块。
 4. **理解部署成本：** 阅读 LLM Serving 课程解读，把参数量、FLOPs、KV cache、显存、吞吐和延迟联系起来。
@@ -41,6 +42,9 @@
 │   ├── 激活函数/
 │   │   ├── 激活函数_从非线性到SwiGLU.md
 │   │   └── assets/              # 两条参考视频的 30 张关键画面
+│   ├── 梯度消失与爆炸/
+│   │   ├── 梯度消失与爆炸_从链式法则到残差连接.md
+│   │   └── assets/              # 22 张参考视频画面
 │   └── Transformer全流程/
 │       ├── Transformer_从输入到自回归生成.md
 │       └── assets/              # 35 张参考视频画面
