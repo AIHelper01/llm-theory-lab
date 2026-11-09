@@ -8,11 +8,15 @@
 
 | 主题 | 文档 | 内容 |
 | --- | --- | --- |
+| 深度学习基础 · 激活函数 | [激活函数：从非线性到 SwiGLU](技术前要-深度学习基础/激活函数/激活函数_从非线性到SwiGLU.md) | 两条视频的 30 张截图、函数与梯度手算、论文作者、FFN / SwiGLU 结构与计算预算 |
+| 深度学习基础 · Transformer 全流程 | [Transformer：从输入到自回归生成](技术前要-深度学习基础/Transformer全流程/Transformer_从输入到自回归生成.md) | 35 张视频截图串联 Encoder–Decoder、交叉注意力、目标右移、损失、生成循环、KV cache 与 Decoder-only |
 | Transformer 基础 | [Attention Is All You Need](技术起源-Transformer/Attention_Is_All_You_Need.md) | 从 Embedding、Attention、FFN 到 Encoder–Decoder 与 Decoder-only |
-| 位置编码 | [位置编码论文与技术演进](技术演进-位置编码优化/Transformer_位置编码论文与技术演进.md) | Sinusoidal、相对位置表示、T5、RoPE、ALiBi |
-| RoPE 专题 | [RoPE 原理与 Qwen / DeepSeek 架构解读](技术演进-位置编码优化/RoPE_原理与Qwen_DeepSeek架构解读.md) | 旋转位置编码的数学机制及架构应用 |
-| 注意力机制 | [Attention 技术演进](技术演进-注意力机制/Attention_技术演进_Transformer至Qwen3.8与DeepSeekV4.1.md) | MHA、MQA、GQA、FlashAttention、MLA、线性与稀疏注意力等 |
-| FFN 与专家模型 | [MoE 核心论文与技术演进](技术演进-FNN层/MoE_核心论文与技术演进.md) | 专家路由、激活参数、负载均衡及相关论文 |
+| 位置编码 | [位置编码论文与技术演进](技术拆解-位置编码优化/Transformer_位置编码论文与技术演进.md) | Sinusoidal、相对位置表示、T5、RoPE、ALiBi |
+| RoPE 专题 | [RoPE 原理与 Qwen / DeepSeek 架构解读](技术拆解-位置编码优化/RoPE_原理与Qwen_DeepSeek架构解读.md) | 旋转位置编码的数学机制及架构应用 |
+| 注意力机制 | [Attention 技术演进](技术拆解-注意力机制/Attention_技术演进_Transformer至Qwen3.8与DeepSeekV4.1.md) | MHA、MQA、GQA、FlashAttention、MLA、线性与稀疏注意力等 |
+| FFN 与专家模型 | [MoE 核心论文与技术演进](技术拆解-FNN层/MoE_核心论文与技术演进.md) | 专家路由、激活参数、负载均衡及相关论文 |
+| 残差连接 | [残差连接：从 ResNet 到 Transformer](技术拆解-残差链接/残差连接_从ResNet到Transformer.md) | 作者与核心论文、退化问题、梯度推导、视频图示及 FFN / MoE 中的残差结构 |
+| 归一化 | [归一化：从 LayerNorm 到 RMSNorm](技术拆解-归一化/归一化_从LayerNorm到RMSNorm.md) | 作者与核心论文、BN / LN / RMSNorm、公式手算、梯度及 Pre-Norm / Post-Norm |
 | Qwen | [Qwen 技术优化路线与官方资料索引](技术代表/Qwen_技术优化路线与官方资料索引.md) | 从模块改动理解模型架构，附原始资料入口 |
 | DeepSeek | [DeepSeek 技术优化路线与官方资料索引](技术代表/DeepSeek_技术优化路线与官方资料索引.md) | 注意力、KV 压缩、MoE 等优化路线与资料入口 |
 | Qwen 架构专题 | [Qwen3.8-Flash-Next 架构深度解读](技术代表/Qwen3.8-Flash-Next_架构深度解读.md) | 整体结构、模块公式、手算示例与部署含义 |
@@ -21,7 +25,7 @@
 
 ## 建议阅读顺序
 
-1. **建立基础：** 阅读 Transformer 原始论文解读，理解 token、向量、Q/K/V、注意力、FFN 和残差连接。
+1. **建立基础：** 阅读激活函数与 Transformer 全流程专题，把非线性、梯度、各模块和生成过程串起来，再阅读 Transformer 原始论文解读，深入理解向量与矩阵计算。
 2. **拆解模块：** 阅读位置编码、RoPE、Attention 和 MoE 专题，对照输入输出形状理解公式。
 3. **连接具体模型：** 阅读 Qwen 与 DeepSeek 技术路线，将架构设计映射到基础模块。
 4. **理解部署成本：** 阅读 LLM Serving 课程解读，把参数量、FLOPs、KV cache、显存、吞吐和延迟联系起来。
@@ -33,10 +37,19 @@
 ```text
 .
 ├── README.md
+├── 技术前要-深度学习基础/
+│   ├── 激活函数/
+│   │   ├── 激活函数_从非线性到SwiGLU.md
+│   │   └── assets/              # 两条参考视频的 30 张关键画面
+│   └── Transformer全流程/
+│       ├── Transformer_从输入到自回归生成.md
+│       └── assets/              # 35 张参考视频画面
 ├── 技术起源-Transformer/
-├── 技术演进-位置编码优化/
-├── 技术演进-注意力机制/
-├── 技术演进-FNN层/
+├── 技术拆解-位置编码优化/
+├── 技术拆解-注意力机制/
+├── 技术拆解-FNN层/
+├── 技术拆解-残差链接/
+├── 技术拆解-归一化/
 ├── 技术代表/
 └── 哈佛课程解读/
     └── llm_serving_basics_1/
@@ -44,7 +57,7 @@
         └── assets/              # 36 张整页课件截图
 ```
 
-`技术演进-FNN层` 是当前实际目录名，对应内容为 FFN / MoE 专题。
+`技术拆解-FNN层` 是当前实际目录名，对应内容为 FFN / MoE 专题；残差连接与归一化已分别归入独立目录。
 
 ## 阅读方式
 

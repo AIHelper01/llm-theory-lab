@@ -230,6 +230,8 @@ Desktop.ini
 
 # Temporary outputs and caches
 tmp/
+.playwright-cli/
+output/playwright/
 __pycache__/
 *.py[cod]
 
