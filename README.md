@@ -15,6 +15,7 @@
 | Transformer 基础 | [Attention Is All You Need](技术起源-Transformer/Attention_Is_All_You_Need.md) | 从 Embedding、Attention、FFN 到 Encoder–Decoder 与 Decoder-only |
 | 位置编码 | [位置编码论文与技术演进](技术拆解-位置编码优化/Transformer_位置编码论文与技术演进.md) | Sinusoidal、相对位置表示、T5、RoPE、ALiBi |
 | RoPE 专题 | [RoPE 原理与 Qwen / DeepSeek 架构解读](技术拆解-位置编码优化/RoPE_原理与Qwen_DeepSeek架构解读.md) | 旋转位置编码的数学机制及架构应用 |
+| KV Cache 基础 | [KV Cache：从因果不变性到 Prefill / Decode](技术拆解-注意力机制/KVCache/KVCache基础_从因果不变性到Prefill与Decode.md) | 29 张视频截图、为什么只存 KV、历史表示不变的证明、99% 的计数口径与双层缓存等价验证 |
 | KV Cache 专题 | [KV Cache、MQA、GQA 与 MLA](技术拆解-注意力机制/KVCache/KVCache_MQA_GQA_MLA_从显存公式到低秩吸收.md) | 28 张视频截图、缓存容量手算、KV 共享、MLA 低秩吸收与解耦 RoPE、可运行数学复算 |
 | 注意力机制 | [Attention 技术演进](技术拆解-注意力机制/Attention_技术演进_Transformer至Qwen3.8与DeepSeekV4.1.md) | MHA、MQA、GQA、FlashAttention、MLA、线性与稀疏注意力等 |
 | FFN 与专家模型 | [MoE 核心论文与技术演进](技术拆解-FNN层/MoE_核心论文与技术演进.md) | 专家路由、激活参数、负载均衡及相关论文 |
@@ -58,9 +59,11 @@
 ├── 技术拆解-位置编码优化/
 ├── 技术拆解-注意力机制/
 │   └── KVCache/
+│       ├── KVCache基础_从因果不变性到Prefill与Decode.md
+│       ├── kv_cache_equivalence.py  # 双层因果注意力的缓存等价验证
 │       ├── KVCache_MQA_GQA_MLA_从显存公式到低秩吸收.md
 │       ├── kv_cache_math.py     # 缓存容量与矩阵吸收复算
-│       └── assets/              # 28 张参考视频画面
+│       └── assets/              # 进阶篇 28 张；kv-basics/ 为基础篇 29 张
 ├── 技术拆解-FNN层/
 ├── 技术拆解-残差链接/
 ├── 技术拆解-归一化/

@@ -7,6 +7,8 @@
 
 自回归解码需要反复读取历史 Token 的 Key 和 Value。把它们保留下来可避免重复计算历史表示，但缓存会随历史长度、并发请求数和层数增长。MQA、GQA 通过共享 KV 头减小缓存；MLA 则学习一个紧凑的联合 KV 潜变量，并利用线性变换的结合律在紧凑空间中计算。
 
+建议先读同目录的 [KV Cache 基础：从因果不变性到 Prefill 与 Decode](KVCache基础_从因果不变性到Prefill与Decode.md)，再阅读本篇的缓存压缩路线。
+
 可先读 [Transformer 全流程](../../技术前要-深度学习基础/Transformer全流程/Transformer_从输入到自回归生成.md)，再对照 [Attention 技术演进](../Attention_技术演进_Transformer至Qwen3.8与DeepSeekV4.1.md)。
 
 ## 一、先审视视频开场：显存数字需要哪些条件？
