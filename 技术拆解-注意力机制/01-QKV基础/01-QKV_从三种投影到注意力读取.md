@@ -5,7 +5,7 @@
 > **原视频：** [抖音视频](https://www.douyin.com/video/7687924744439614783)  
 > **内容：** 22 张视频截图，以“它”读取“小猫”等位置为例，逐步计算投影、点积、缩放、softmax 和 Value 汇总；另附受控对比及标准库复算代码。视频中的数值是教学示例，不是真实模型抽取结果。
 
-**目录位置：** `技术拆解-注意力机制/QKV基础/`。建议在 [Token 与 Embedding](../../技术拆解-分词与向量化/Embedding/Token与Embedding_从strawberry计数到向量查表.md) 之后阅读，再进入 [位置编码](../../技术拆解-位置编码优化/正弦位置编码/正弦位置编码_从序列编号到多频率坐标.md)、[Attention 演进](../Attention_技术演进_Transformer至Qwen3.8与DeepSeekV4.1.md) 与 [KV Cache](../KVCache/KVCache基础_从因果不变性到Prefill与Decode.md)。
+**目录位置：** `技术拆解-注意力机制/01-QKV基础/`。建议在 [Token 与 Embedding](../../技术拆解-分词与向量化/Embedding/Token与Embedding_从strawberry计数到向量查表.md) 之后阅读，再进入 [位置编码](../../技术拆解-位置编码优化/正弦位置编码/正弦位置编码_从序列编号到多频率坐标.md)、[Attention 演进](../06-Attention技术演进/06-Attention_技术演进_Transformer至Qwen3.8与DeepSeekV4.1.md) 与 [KV Cache](../03-KVCache基础/03-KVCache基础_从因果不变性到Prefill与Decode.md)。
 
 ## 一、跟着“它”这个位置，看一次读取
 
@@ -200,7 +200,7 @@ $QK^T$ 形状为 $T\times T$，行是发起读取的 Query 位置，列是被读
 
 ![视频 09:30：三种角色的总结](assets/video-570s.jpg)
 
-多头注意力为不同头使用不同的投影表示，再将各头输出组合。MQA / GQA 可以共享部分 KV 头，但 Query 仍可保持多头，详见 [KV 缓存与共享专题](../KVCache/KVCache_MQA_GQA_MLA_从显存公式到低秩吸收.md)。
+多头注意力为不同头使用不同的投影表示，再将各头输出组合。MQA / GQA 可以共享部分 KV 头，但 Query 仍可保持多头，详见 [KV 缓存与共享专题](../05-KVCache进阶与MLA/05-KVCache_MQA_GQA_MLA_从显存公式到低秩吸收.md)。
 
 ## 十、位置编码与 KV Cache 怎样接到这里？
 
@@ -208,7 +208,7 @@ $QK^T$ 形状为 $T\times T$，行是发起读取的 Query 位置，列是被读
 
 位置机制将序列位置引入输入或 Q / K 匹配中。屏幕上把词画成从左到右，并不自动给无位置的注意力提供数值坐标。因果掩码本身提供可见顺序结构，但也不等同于完整的显式位置编码。
 
-历史 K、V 可在标准因果增量推理中复用；新位置拿自己的 Q 与历史 Key 匹配，再读历史 Value，因此长期缓存通常不需要旧 Q。关于前提和跨层过程，见 [KV Cache 基础](../KVCache/KVCache基础_从因果不变性到Prefill与Decode.md)。
+历史 K、V 可在标准因果增量推理中复用；新位置拿自己的 Q 与历史 Key 匹配，再读历史 Value，因此长期缓存通常不需要旧 Q。关于前提和跨层过程，见 [KV Cache 基础](../03-KVCache基础/03-KVCache基础_从因果不变性到Prefill与Decode.md)。
 
 ![视频 10:30：Q / K 决定比例，V 提供内容](assets/video-630s.jpg)
 
@@ -218,7 +218,7 @@ $QK^T$ 形状为 $T\times T$，行是发起读取的 Query 位置，列是被读
 
 可参考 Sarthak Jain、Byron C. Wallace 的 [Attention is not Explanation](https://arxiv.org/abs/1902.10186)（2019-02-26 首次公开）。该文提供特定任务上的实验提醒，不将其扩展为“注意力无法用于任何分析”的绝对结论。
 
-后续阅读 [多头注意力：从独立投影到拼接融合](../多头注意力/多头注意力_从独立投影到拼接融合.md)，把本篇单头读取扩展为并行多头计算。
+后续阅读 [多头注意力：从独立投影到拼接融合](../02-多头注意力/02-多头注意力_从独立投影到拼接融合.md)，把本篇单头读取扩展为并行多头计算。
 
 ## 十二、复算与原始资料
 

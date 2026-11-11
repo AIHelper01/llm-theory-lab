@@ -207,7 +207,7 @@ $$
 
 容量受限的路由实现可能丢弃、改派或另行处理超额分配，也有不丢 Token 的设计。不能把某种容量策略写成所有 MoE 的默认行为。
 
-KV Cache 取决于注意力结构，不能由 MoE 专家激活比例直接推出。背景见 [KV Cache 基础](../../技术拆解-注意力机制/KVCache/KVCache基础_从因果不变性到Prefill与Decode.md)。
+KV Cache 取决于注意力结构，不能由 MoE 专家激活比例直接推出。背景见 [KV Cache 基础](../../技术拆解-注意力机制/03-KVCache基础/03-KVCache基础_从因果不变性到Prefill与Decode.md)。
 
 ## 十一、每一层重新路由，不是整段请求只选一次
 

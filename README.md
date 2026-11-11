@@ -36,14 +36,17 @@
 | Transformer 基础 | [Attention Is All You Need](技术起源-Transformer/Attention_Is_All_You_Need.md) | 从 Embedding、Attention、FFN 到 Encoder–Decoder 与 Decoder-only |
 | 分词与向量化 · BPE | [BPE 分词：从相邻合并到 Embedding](技术拆解-分词与向量化/BPE分词/BPE分词_从相邻合并到Embedding.md) | 23 张视频截图、相邻对统计与三轮合并手算、字节级编码、Token ID、Embedding 及可运行教学代码 |
 | 分词与向量化 · Embedding | [Token 与 Embedding：从 strawberry 计数到向量查表](技术拆解-分词与向量化/Embedding/Token与Embedding_从strawberry计数到向量查表.md) | 27 张视频截图、ID 与向量的区别、查表及梯度手算、字符计数、词表容量与代码核对 |
-| 注意力基础 · QKV | [Q、K、V：从三种投影到注意力读取](技术拆解-注意力机制/QKV基础/QKV_从三种投影到注意力读取.md) | 22 张视频截图、投影与点积手算、softmax、Value 汇总、K / V 受控对比及因果矩阵验证 |
-| 注意力基础 · 多头 | [多头注意力：从独立投影到拼接融合](技术拆解-注意力机制/多头注意力/多头注意力_从独立投影到拼接融合.md) | 22 张视频截图、双头手算、投影后拆头、输出融合、张量形状与参数预算 |
+| 注意力基础 · QKV | [Q、K、V：从三种投影到注意力读取](技术拆解-注意力机制/01-QKV基础/01-QKV_从三种投影到注意力读取.md) | 22 张视频截图、投影与点积手算、softmax、Value 汇总、K / V 受控对比及因果矩阵验证 |
+| 注意力基础 · 多头 | [多头注意力：从独立投影到拼接融合](技术拆解-注意力机制/02-多头注意力/02-多头注意力_从独立投影到拼接融合.md) | 22 张视频截图、双头手算、投影后拆头、输出融合、张量形状与参数预算 |
 | 位置编码基础 · 正弦 | [从序列编号到多频率坐标](技术拆解-位置编码优化/正弦位置编码/正弦位置编码_从序列编号到多频率坐标.md) | 24 张视频截图、位置相加、正余弦公式、坐标手算、位移矩阵与外推边界 |
 | 位置编码基础 · RoPE | [从二维旋转到相对位置点积](技术拆解-位置编码优化/RoPE基础/RoPE_从二维旋转到相对位置点积.md) | 24 张视频截图、旋转矩阵、相对位移推导、多频率、KV 缓存及长上下文边界 |
+| 位置编码 · B 站推导 | [为什么不用序列编号](技术拆解-位置编码优化/正弦位置编码/正弦位置编码_B站推导_为什么不用序列编号.md) → [从旋转矩阵到相对位置](技术拆解-位置编码优化/RoPE基础/RoPE_B站推导_从旋转矩阵到相对位置.md) | 算法魔法师的两期视频，分别推导正弦编码的位移矩阵与 RoPE 的相对位置点积，共 17 张截图 |
+| 位置编码 · YaRN | [RoPE 分频缩放与注意力温度](技术拆解-位置编码优化/YaRN/YaRN_B站解读_从RoPE分频缩放到注意力温度.md) | 6 张视频截图、NTK-by-parts、温度缩放及 4K 到 128K 的实验条件 |
 | 深度学习基础 · 激活函数 | [激活函数：从非线性到 SwiGLU](技术前要-深度学习基础/激活函数/激活函数_从非线性到SwiGLU.md) | 两条视频的 30 张截图、函数与梯度手算、论文作者、FFN / SwiGLU 结构与计算预算 |
 | FFN 原理 | [FFN：从非线性特征到 SwiGLU 与参数记忆](技术拆解-FNN层/FFN/FFN_从非线性特征到SwiGLU与参数记忆.md) | 26 张视频截图、升降维与矩阵手算、几何解释、SwiGLU、参数预算与记忆解释 |
 | 残差连接 | [残差连接：从 ResNet 到 Transformer](技术拆解-残差链接/残差连接_从ResNet到Transformer.md) | 作者与核心论文、退化问题、梯度推导、视频图示及 FFN / MoE 中的残差结构 |
 | 归一化 | [归一化：从 LayerNorm 到 RMSNorm](技术拆解-归一化/归一化_从LayerNorm到RMSNorm.md) | 作者与核心论文、BN / LN / RMSNorm、公式手算、梯度及 Pre-Norm / Post-Norm |
+| 归一化 · B 站解读 | [从 BN 到 LN 与 RMSNorm](技术拆解-归一化/归一化_B站解读_从BN到LN与RMSNorm.md) | 10 张视频截图、归一化统计轴、LN 与 RMSNorm 手算，以及 BN 优化机制的论文讨论 |
 | 深度学习基础 · 梯度传播 | [梯度消失与爆炸：从链式法则到残差连接](技术前要-深度学习基础/梯度消失与爆炸/梯度消失与爆炸_从链式法则到残差连接.md) | 22 张视频截图、梯度连乘、神经元与矩阵反传手算、Sigmoid / ReLU、初始化及残差路径 |
 | 输出层与采样 | [从 Logits 到 Temperature、Top-k 与 Top-p](技术拆解-输出/输出层与采样_从Logits到Temperature与TopP.md) | 28 张视频截图、LM Head、softmax 与温度手算、过滤及抽样、随机种子与复现边界 |
 
@@ -51,13 +54,16 @@
 
 | 主题 | 文档 | 内容 |
 | --- | --- | --- |
-| KV Cache 基础 | [KV Cache：从因果不变性到 Prefill / Decode](技术拆解-注意力机制/KVCache/KVCache基础_从因果不变性到Prefill与Decode.md) | 29 张视频截图、为什么只存 KV、历史表示不变的证明、99% 的计数口径与双层缓存等价验证 |
-| KV Cache 专题 | [KV Cache、MQA、GQA 与 MLA](技术拆解-注意力机制/KVCache/KVCache_MQA_GQA_MLA_从显存公式到低秩吸收.md) | 28 张视频截图、缓存容量手算、KV 共享、MLA 低秩吸收与解耦 RoPE、可运行数学复算 |
+| KV Cache 基础 | [KV Cache：从因果不变性到 Prefill / Decode](技术拆解-注意力机制/03-KVCache基础/03-KVCache基础_从因果不变性到Prefill与Decode.md) | 29 张视频截图、为什么只存 KV、历史表示不变的证明、99% 的计数口径与双层缓存等价验证 |
+| KV Cache 番外 | [Prompt Cache 与跨请求前缀复用](技术拆解-注意力机制/03-KVCache基础/03-番外_PromptCache与跨请求前缀复用.md) | 9 张视频截图、前缀命中、工具定义与上下文压缩的取舍 |
+| MHA、MQA 与 GQA | [从多头计算到 KV 共享](技术拆解-注意力机制/04-MHA-MQA-GQA/04-MHA-MQA-GQA_从多头计算到KV共享.md) | 8 张视频截图、查询头与 KV 头的共享方式、缓存容量算例 |
+| KV Cache 专题 | [KV Cache、MQA、GQA 与 MLA](技术拆解-注意力机制/05-KVCache进阶与MLA/05-KVCache_MQA_GQA_MLA_从显存公式到低秩吸收.md) | 28 张视频截图、缓存容量手算、KV 共享、MLA 低秩吸收与解耦 RoPE、可运行数学复算 |
 | MoE 原理 | [MoE：从稠密 FFN 到稀疏路由与负载均衡](技术拆解-FNN层/MoE/MoE_从稠密FFN到稀疏路由与负载均衡.md) | 30 张视频截图、Top-k 手算、负载均衡、细粒度与共享专家、参数及通信成本 |
 | FFN 与专家模型 | [MoE 核心论文与技术演进](技术拆解-FNN层/MoE_核心论文与技术演进.md) | 专家路由、激活参数、负载均衡及相关论文 |
 | 位置编码 | [位置编码论文与技术演进](技术拆解-位置编码优化/Transformer_位置编码论文与技术演进.md) | Sinusoidal、相对位置表示、T5、RoPE、ALiBi |
 | RoPE 专题 | [RoPE 原理与 Qwen / DeepSeek 架构解读](技术拆解-位置编码优化/RoPE_原理与Qwen_DeepSeek架构解读.md) | 旋转位置编码的数学机制及架构应用 |
-| 注意力机制 | [Attention 技术演进](技术拆解-注意力机制/Attention_技术演进_Transformer至Qwen3.8与DeepSeekV4.1.md) | MHA、MQA、GQA、FlashAttention、MLA、线性与稀疏注意力等 |
+| 注意力机制 | [Attention 技术演进](技术拆解-注意力机制/06-Attention技术演进/06-Attention_技术演进_Transformer至Qwen3.8与DeepSeekV4.1.md) | MHA、MQA、GQA、FlashAttention、MLA、线性与稀疏注意力等 |
+| 注意力机制 · 视频补充 | [百万上下文与注意力演进](技术拆解-注意力机制/06-Attention技术演进/06-视频补充_百万上下文与注意力演进.md) | 10 张视频截图，比较 KV 头共享、MLA、DSA 与 CSA 对缓存和读取的影响 |
 
 ### 3. 代表模型与资料索引
 
@@ -95,16 +101,15 @@
 ├── 技术起源-Transformer/
 ├── 技术拆解-位置编码优化/
 │   ├── 正弦位置编码/            # 独立视频解读、复算代码与 24 张截图
-│   └── RoPE基础/                # 独立视频解读、复算代码与 24 张截图
+│   ├── RoPE基础/                # 独立视频解读、复算代码与 24 张截图
+│   └── YaRN/                    # RoPE 长度扩展与注意力温度
 ├── 技术拆解-注意力机制/
-│   ├── QKV基础/                # 单头注意力解读、复算代码与 22 张截图
-│   ├── 多头注意力/             # 双头手算、拼接融合与 22 张截图
-│   └── KVCache/
-│       ├── KVCache基础_从因果不变性到Prefill与Decode.md
-│       ├── kv_cache_equivalence.py  # 双层因果注意力的缓存等价验证
-│       ├── KVCache_MQA_GQA_MLA_从显存公式到低秩吸收.md
-│       ├── kv_cache_math.py     # 缓存容量与矩阵吸收复算
-│       └── assets/              # 进阶篇 28 张；kv-basics/ 为基础篇 29 张
+│   ├── 01-QKV基础/
+│   ├── 02-多头注意力/
+│   ├── 03-KVCache基础/
+│   ├── 04-MHA-MQA-GQA/
+│   ├── 05-KVCache进阶与MLA/
+│   └── 06-Attention技术演进/
 ├── 技术拆解-FNN层/
 │   ├── MoE_核心论文与技术演进.md
 │   ├── FFN/                    # FFN 视频解读、复算代码与 26 张截图

@@ -1107,6 +1107,6 @@ result = detokenize(prefix[1:])
 6. Hugging Face Transformers. **Causal language modeling.** [官方教程](https://huggingface.co/docs/transformers/en/tasks/language_modeling)。理解 Decoder-only 的条件生成与标签约定。
 7. PyTorch. **Transformer.** [官方接口](https://docs.pytorch.org/docs/stable/generated/torch.nn.Transformer.html)。核对形状、Mask 语义和排列配置。
 
-仓库内关联阅读：[激活函数](../激活函数/激活函数_从非线性到SwiGLU.md)、[原论文详解](../../技术起源-Transformer/Attention_Is_All_You_Need.md)、[注意力机制演进](../../技术拆解-注意力机制/Attention_技术演进_Transformer至Qwen3.8与DeepSeekV4.1.md)、[位置编码](../../技术拆解-位置编码优化/Transformer_位置编码论文与技术演进.md)。
+仓库内关联阅读：[激活函数](../激活函数/激活函数_从非线性到SwiGLU.md)、[原论文详解](../../技术起源-Transformer/Attention_Is_All_You_Need.md)、[注意力机制演进](../../技术拆解-注意力机制/06-Attention技术演进/06-Attention_技术演进_Transformer至Qwen3.8与DeepSeekV4.1.md)、[位置编码](../../技术拆解-位置编码优化/Transformer_位置编码论文与技术演进.md)。
 
 本文的注意力小矩阵、概率、损失与缓存容量均用于教学复算，不是对某个当前模型的性能或内部权重测量。

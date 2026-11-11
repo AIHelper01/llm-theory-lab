@@ -5,7 +5,7 @@
 > **原视频：** [抖音视频](https://www.douyin.com/video/7694995019916119315)  
 > **内容：** 按视频顺序整理 29 张截图，讲解重复计算、因果不变性、Q / K / V 的复用、Prefill / Decode 和显存成本；另附手算与双层因果注意力的可运行数值验证。补充推导不是视频逐字转录。
 
-**本篇位置：** 本文与 [MQA / GQA / MLA 专题](KVCache_MQA_GQA_MLA_从显存公式到低秩吸收.md) 同属 `技术拆解-注意力机制/KVCache/`。建议先读本篇理解“为什么能缓存”，再读后者理解“怎样让缓存更小”。
+**本篇位置：** 本文与 [MQA / GQA / MLA 专题](../05-KVCache进阶与MLA/05-KVCache_MQA_GQA_MLA_从显存公式到低秩吸收.md) 配套阅读。先读本篇理解“为什么能缓存”，再读 [MHA、MQA 与 GQA](../04-MHA-MQA-GQA/04-MHA-MQA-GQA_从多头计算到KV共享.md)，最后进入 MLA 专题。
 
 KV Cache 保存每层、每个历史位置的 Key 和 Value，使增量解码不必重新处理全部历史位置。它利用的是固定前缀在因果网络中的计算不变性，代价是持续保存并反复读取历史数据。标题中的“99%”描述特定计数口径下的重复工作，不代表任何部署都能提速一百倍。
 
@@ -235,7 +235,7 @@ $B$ 为独立序列数，$T$ 为每条实际保留的长度，$L$ 为层数，$H
 
 ![视频 12:50：通过 GQA 减少 KV 份数](assets/kv-basics/video-770s.jpg)
 
-接下来的 MQA / GQA / MLA 就是在缓存规模上继续优化，详见 [进阶专题](KVCache_MQA_GQA_MLA_从显存公式到低秩吸收.md)。
+接下来的 MQA / GQA / MLA 就是在缓存规模上继续优化，详见 [进阶专题](../05-KVCache进阶与MLA/05-KVCache_MQA_GQA_MLA_从显存公式到低秩吸收.md)。
 
 ## 十一、为什么有缓存，Decode 仍可能受带宽限制？
 
@@ -302,4 +302,4 @@ python3 kv_cache_equivalence.py
 | 11:40—14:00，每 35 秒一帧 | 缓存显存、并发、共享与带宽 |
 | 14:35、15:10、15:45、16:05 | 回顾与下一专题 |
 
-建议阅读路线：本篇 → [MQA / GQA / MLA](KVCache_MQA_GQA_MLA_从显存公式到低秩吸收.md) → [LLM Serving Basics I](../../哈佛课程解读/llm_serving_basics_1/逐页解读.md)。
+建议阅读路线：本篇 → [MQA / GQA / MLA](../05-KVCache进阶与MLA/05-KVCache_MQA_GQA_MLA_从显存公式到低秩吸收.md) → [LLM Serving Basics I](../../哈佛课程解读/llm_serving_basics_1/逐页解读.md)。

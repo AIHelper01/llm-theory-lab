@@ -11,9 +11,7 @@
 文本 → Tokenizer → Token ID 序列 → Embedding 查表 → Transformer → 输出分布
 ```
 
-查表、向量训练与字符任务可继续阅读 [Token 与 Embedding：从 strawberry 计数到向量查表](../Embedding/Token与Embedding_从strawberry计数到向量查表.md)。
-
-建议结合 [Transformer 全流程](../../技术前要-深度学习基础/Transformer全流程/Transformer_从输入到自回归生成.md) 阅读，理解 Tokenizer 输出怎样进入模型。
+建议结合 [Transformer 全流程](../Transformer全流程/Transformer_从输入到自回归生成.md) 阅读，理解 Tokenizer 输出怎样进入模型。
 
 ## 一、一个汉字、一个词，还是一个 Token？
 
